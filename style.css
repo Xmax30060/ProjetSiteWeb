@@ -1,0 +1,349 @@
+body {
+	display: block;
+	width: 100%;	
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color : black; 
+	font-family: Comic sans MS, Arial;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#en_tete {
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	font-family: Comic sans MS, Arial;
+    background: linear-gradient(to right, rgb(255,102,0),rgb(0,0,0));
+}
+.code-container {
+	font-size: 20px;
+	background-color: #272822;
+	color: #f8f8f2;
+	padding: 15px;
+	border-radius: 1px;
+	width: 85%;
+	text-align: left;
+	font-family: "Courier New", monospace;
+	white-space: pre-wrap; /* Permet le retour à la ligne */
+	line-height: 0px;
+	transition: opacity 0.3s ease-in-out;
+	animation: fadeIn 0.3s ease-in-out forwards;
+	opacity: 0;
+}
+.code-container.show {
+	opacity: 1;
+}
+
+
+.hidden {  
+opacity: 0;  
+pointer-events: none; /* Empêche l'interaction avec l'élément caché */  
+transition: opacity 0.3s ease-in-out;  
+display: none;  
+}
+
+	
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+
+}
+
+.language-css, language-html {
+	padding:0px;
+	text-align: left;
+	
+}
+.Title {
+	font-size: 40px;
+	text-align: center;
+	background: rgb(255,102,0);
+	position: relative;
+	font-family: 'Century Gothic', 'Apple Gothic', sans-serif;
+	line-height: 5px;
+}
+#def{
+	text-align : right;	
+}
+.SousTexte{
+    font-size: 20px;
+    font-family: Comic sans MS, Arial;
+}
+.NRI{
+    color: rgb(255,255,255,0);
+}
+#menu {
+	font-size: 30px;
+	width: 300px;
+	font-family: Comic sans MS, Arial;
+	position: fixed;
+	top: 20%;
+	left: 0;	
+	padding: 0px;
+	z-index: 1000;
+	transition: top 0.4s ease-in-out; /* Animation douce */
+}
+
+
+
+
+
+nav.menu-nav ul li.btn {
+	/*display: inline-block;*/
+	list-style-type: none;    
+}
+	
+nav.menu-nav ul li.btn a {
+	color: #B3B3B3;	
+	text-decoration:none;
+	transition: 0.5s all;
+	
+}
+
+nav.menu-nav ul li.btn:hover a {
+	color: black;
+	background-color: #B3B3B3;
+	text-decoration: none;
+
+	/*padding: 10px;*/
+}
+
+.element_menu {
+	background-repeat: repeat-x;
+	border: 2px solid black;
+	/*margin-bottom: 20px;*/
+	background: linear-gradient(to right, rgb(255,102,0),rgb(0,0,0));
+}
+
+.element_menu h3 {    
+   color: #B3B3B3;
+   text-align: left;
+}
+#HtmlImg {
+    float: right;
+    margin-left: 15px; /* Ajoute un espace entre l'image et le texte */
+}
+
+.element_menu ul {
+   padding: 0px;
+   padding-left: 20px;
+   margin: 0px;
+   margin-bottom: 5px;
+}
+
+.element_menu a {
+   color: #B3B3B3;
+}
+
+.element_menu a:hover {
+   background-color: black;
+   color: black;
+}
+#corps {
+	margin-left: 300px;
+	margin-bottom: 30px;
+	padding: 5px;
+	color: #B3B3B3;
+	background-repeat: repeat-x;
+	border: 2px solid black;
+}
+
+#corps h2 {
+	//height: 30px;
+	background-image: url(images/carbonfiber.jpg);
+	background-repeat: no-repeat;	
+	color: #B3B3B3;
+	text-align: left;
+    //margin-bottom: 15px; /* Ajoute de l'espace sous chaque élément */
+
+}
+#corps iframe, h2, .code-container {
+	margin: 50px;
+}
+
+#pied_de_page {
+	padding: 5px;
+	clear: both;
+	text-align: center;
+	color: #B3B3B3;
+	background: linear-gradient(to bottom, red, black);
+	border: 2px solid black;
+	font-family: Comic sans MS, Arial;
+}
+.image-button {
+	width: 32px; /* Ajuste selon l'image */
+	height: 30px; /* Ajuste selon l'image */
+	background-image: url('Images/Copier.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	float: right;
+	/* Effets du bouton */
+	position: relative;
+	transition-duration: 0.4s;
+	overflow: hidden;
+}
+
+.image-button:after {
+	content: "";
+	background: #90EE90;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s;
+	border-radius: 50%;
+}
+
+.image-button:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
+}
+#Source li{
+    list-style: square;
+
+}
+/* Conteneur de la barre */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    z-index: 1000;
+}
+
+/* Barre de progression */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    transition: width 0.1s linear;
+}
+
+/* Simuler du contenu long */
+.content {
+    height: 200vh; /* 200% de la hauteur de l'écran */
+    padding: 20px;
+    font-size: 18px;
+}
+a {
+	color: cyan;
+}
+.Code_container_TTG {
+	display: none;
+	background: #f4f4f4;
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 350px;
+	word-wrap: break-word;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	margin-left: 10px;
+}
+.Code_Printer :not(h1) {
+	font-family: Arial, sans-serif;
+	font-size: clamp(0.8rem, 1vw, 1rem);
+}
+.Code_Printer {	
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	padding-block-start: inherit;
+}
+
+.Code_Printer container {
+	max-width: 100%;
+	width: 600px;
+}
+
+.Code_Printer balise {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.Code_Printer button {
+	cursor: pointer;
+	padding: 5px 10px;
+	border: none;
+	background-color: #007bff;
+	color: white;
+	border-radius: 5px;
+}
+
+.Code_Printer button:hover {
+	background-color: #0056b3;
+}
+
+.Code_container_TTG.show {
+	display: block;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	.balise {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.code {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-top: 5px;
+	}
+}
+.biography-container {
+	display: flex;
+	align-items: flex-start;
+	top: 0;
+}
+
+.biography-image {
+	max-width: 400px;
+	height: auto;
+	float: right;
+	margin-left: 20px;
+}
+
+

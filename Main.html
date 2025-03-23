@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML</title>
+    <link rel="icon" type="image/png" href="images/html-5.png">
+    <!-- Prism.js pour la coloration syntaxique -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</head>
+
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="scrollBar"></div>
+    </div>
+    <!-- <img src="images/photo-lycee-ENT.jpg" height="200" width="1400"> -->
+    <div class="Title">
+        <p class="NRI">.</p>
+        <div class="balise">            
+            <div class="Code_Printer">
+                <h1 id="Title">&lt; HTML &gt;</h1>                
+                </div>
+            </div>
+            <p class="SousTexte">(HyperText Markup Language)</p>
+            <p class="NRI">.</p>
+        </div>
+
+        <div id="menu">
+            <div class="element_menu">
+                <h3>Seconde 11</h3>
+                <nav class="menu-nav">
+                    <ul>
+                        <li class="btn"><a href="Main.html">Accueil</a></li>
+                        <li class="btn"><a href="#Def">Définitions</a></li>                        
+                        <li class="btn"><a href="#Timme">TimeLine</a></li>
+                        <li class="btn"><a href="#biography-container">Biographie</a></li>
+                        <li class="btn"><a href="#htmlLink²">References Html</a></li>
+                        <li class="btn"><a href="#CssLink">References Css</a></li>
+                        <li class="btn"><a href="#Source">Sources</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="corps">
+            <p>Ceci est la production du groupe de Matthew, Lucas et Mathis de la seconde 11.</p>
+
+            <h1 id="Def">Définitions :</h1>
+            <h2 align="left">Le langage <mark>HTML</mark> (HyperText Markup Language) permet de structurer et de mettre en forme les éléments d’une page Web. Il s’écrit avec des balises qui fonctionnent toujours par deux : la <mark>balise</mark> d’ouverture et la balise de fermeture.</h2>
+            <h2><mark>CSS</mark> est l'acronyme de « Cascading Style Sheets » ce qui signifie « feuille de style en cascade ». Le CSS correspond à un <mark>langage informatique</mark> permettant de mettre en forme des pages web (HTML). Ce langage est donc composé des fameuses « feuilles de style en cascade » également appelées fichiers CSS.</h2>
+            <h1>TimeLine du HTML:</h1>
+
+            <center><img class="Timme" id="Timme" src="Images/Timeline.png" alt="Timeline.png, 38kB" title="Timeline" height="240" width="1200"></center>
+            
+            <h1>Biographie de son inventeur</h1>
+            <div id="biography-container" class="biography-container">  
+                <img src="images/ImageTBL.jpg" alt="Tim Berners-Lee" class="biography-image">
+                <h2>Tim Berners-Lee, né le <u>8 juin 1955</u> à <u>Londres</u>, est un informaticien britannique, inventeur du <u>World Wide Web (WWW)</u>. Après des études en physique à l'Université d'Oxford, il travaille au <u>CERN</u> dans les années 1990, où il développe les technologies fondamentales du Web : les <u>URL</u>, le protocole <u>HTTP</u> et le langage <u>HTML</u>. Il fonde le <u>World Wide Web Consortium (W3C)</u> en 1994 pour superviser le développement du Web. En 2004, il est fait chevalier par la reine Elizabeth II pour ses contributions à l'informatique.</h2>  
+            </div>
+            
+
+            <h1>Apprendre le HTML et le CSS, tuto complet :</h1>
+            <div><iframe width="853" height="480" src="https://www.youtube.com/embed/6hCGTJCo_Uo" frameborder="0" allowfullscreen></iframe></div>
+            <h1>Comprendre ce qu'est le HTML</h1>
+            <div ><iframe width="853" height="480" src="https://www.youtube.com/embed/yU20m38Kwgw" frameborder="0" allowfullscreen></iframe></div>
+            
+
+            <h1>La base pour un fichier HTML/CSS</h1>
+            <div class="code-container">
+                
+                <p id="htmlLink²" class="">Index.html: <a href="https://youtu.be/KsCUcBK9q14?si=os7gLSvOJ6o19dOz&t=90">Tuto Vidéo</a></p>
+                <pre>
+                <button id="bt2" class="image-button"></button>
+                <code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="fr"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Titre de la page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;Ceci est un exemple de code affiché en HTML.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+                    </code>
+
+                </pre>
+                
+                <p id="CssLink">Style.css: <a href="https://cssreference.io/">Références des règles</a></p>
+                <pre>
+                <button id="bt1" class="image-button"></button>
+                <code class="language-css">
+    /* Styles de base */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    /* Style pour les titres */
+    h1 {
+        color: #007bff;
+        text-align: center;
+    }
+
+    /* Style pour une boîte */
+    .box {
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+                    </code>
+                </pre>
+            </div>
+
+            <div class="Source" id="Source">
+                <h1>Sources :</h1>
+                <li><a href="https://www.libmanuels.fr/reader/9782206103563/14/62?">Manuel</a></li>
+                <li><a href="https://youtube.com/playlist?list=PL7rvUIwS-J3QgCpzF7gElFZ-lI3-ynsCw&si=TcdOqM_t4GZaQAlQ">Youtube</a></li>
+                <li><a href="https://google.com">Google</a></li>
+                <li><a href="https://tipsforyourwebsite.com/very-quick-html-history/">Frise HTML</a></li>
+                <li><a href="https://chatgpt.com/">ChatGPT</a></li>
+                <li><a href="https://cssreference.io/">cssreference</a></li>
+                <li><a href="https://digipad.app/p/1066332/d31b9238bbb16">Reference du digipad</a></li> 
+            </div>
+        </div>
+
+        <div id="pied_de_page">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+            </a>
+            <br />
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Projet création site web SNT</span> de
+            <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Delphine LITCHMAN</span> est mis à disposition selon les termes de la
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licence Creative Commons Attribution - Pas d'Utilisation Commerciale 4.0 International</a>.
+            <br />
+            Les autorisations au-delà du champ de cette licence peuvent être obtenues à
+            <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/litchmanses" rel="cc:morePermissions">https://twitter.com/litchmanses</a>.
+            
+        </div>
+    </body>
+    </html>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        let button = document.querySelector("#bt1");
+        let button2 = document.querySelector("#bt2");
+        let languageCss = document.querySelector(".language-css");
+        let languageHtml = document.querySelector(".language-html");
+        // Mettre à jour la barre de progression en fonction du scroll
+        function updateProgressBar() {
+            let scrollTop = window.scrollY;
+            let windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            let scrollPercent = (scrollTop / windowHeight) * 100;
+
+            document.getElementById("scrollBar").style.width = scrollPercent + "%";
+        }
+
+        // Ajouter un écouteur sur le scroll
+        window.addEventListener("scroll", updateProgressBar);
+        function copierTexte(element, button) {
+            navigator.clipboard.writeText(element.textContent.trim())
+            .then(() => {
+                button.style.backgroundColor = "slategray"; // Fond gris temporaire
+                button.style.borderRadius = "5px"; // Coins arrondis
+                button.style.padding = "5px"; // Espacement pour l'effet visuel
+                button.style.backgroundImage = "url('images/Check.png')"; // Change l'image
+
+                setTimeout(() => {
+                    button.style.backgroundColor = ""; // Réinitialisation
+                    button.style.borderRadius = "";
+                    button.style.padding = "";
+                    button.style.backgroundImage = "url('images/Copier.png')"; // Remet l'image d'origine
+                }, 2000);
+            })
+            .catch(err => {
+                alert("Impossible de copier le texte.");
+            });
+        }
+
+        button.addEventListener("click", () => {
+            copierTexte(languageCss, button);
+        });
+
+        button2.addEventListener("click", () => {
+            copierTexte(languageHtml, button2);
+        });
+        });
+        function toggleCode(id, tag) {
+            var element = document.getElementById(id);
+            element.classList.toggle("show");
+            element.textContent = document.getElementById(tag).outerHTML;
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            let menu = document.getElementById("menu");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+                let scrollTop = window.scrollY || document.documentElement.scrollTop;
+                if (scrollTop > 100 && scrollTop < 210 ) {
+                    menu.style.top = "12%";
+                } else if (scrollTop > 230 ) {
+                    menu.style.top = "2%"; // Ajuste la position du menu
+                }
+                else { // Si on est en haut de la page
+                    menu.style.top = "20%"; // Remet le menu en haut
+                }
+
+
+                lastScrollTop = scrollTop;
+            });
+        });
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            let element = event.target;
+
+            // Vérifie si l'élément est un élément HTML valide (pas déjà un conteneur de code)
+            if (element && element.tagName ) { //&& !element.closest(".code-container")
+                // Crée un conteneur pour afficher le code HTML
+                let codeContainer = document.createElement("div");
+                codeContainer.classList.add("code-container");
+
+                // Crée un élément <pre> et <code> pour afficher le code HTML
+                let pre = document.createElement("pre");
+                let code = document.createElement("code");
+                code.classList.add("language-html");
+
+                // Récupère le code complet de l'élément (y compris ses enfants et attributs)
+                code.textContent = element.outerHTML;
+
+                pre.appendChild(code);
+                codeContainer.appendChild(pre);
+
+                // Cache l'élément original en ajoutant une classe "hidden"
+                element.classList.add("hidden");
+
+                // Remplace l'élément original par le code affiché
+                element.parentNode.insertBefore(codeContainer, element);
+
+                // Applique la coloration syntaxique sur le code HTML affiché
+                Prism.highlightAll();
+
+                // Ajouter un événement pour afficher l'élément lors du clic droit sur le code
+                codeContainer.addEventListener("contextmenu", function (e) {
+                    e.preventDefault();
+
+                    // Afficher l'élément original en supprimant la classe "hidden"
+                    element.classList.remove("hidden");
+
+                    // Remplacer le code par l'élément restauré
+                    codeContainer.remove();
+                });
+            }
+        });        
+    </script>
