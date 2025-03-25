@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Le HTML</title>
     <link rel="icon" type="image/png" href="Images/html-5.png">
-    <!-- Prism.js pour la coloration syntaxique -->
+    <!-- Prism.js : coloration syntaxique -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </head>
@@ -151,8 +151,7 @@
         let button = document.querySelector("#bt1");
         let button2 = document.querySelector("#bt2");
         let languageCss = document.querySelector(".language-css");
-        let languageHtml = document.querySelector(".language-html");
-        // Mettre à jour la barre de progression en fonction du scroll
+        let languageHtml = document.querySelector(".language-html");        
         function updateProgressBar() {
             let scrollTop = window.scrollY;
             let windowHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -161,21 +160,22 @@
             document.getElementById("scrollBar").style.width = scrollPercent + "%";
         }
 
-        // Ajouter un écouteur sur le scroll
+        // scroll
         window.addEventListener("scroll", updateProgressBar);
+        //button
         function copierTexte(element, button) {
             navigator.clipboard.writeText(element.textContent.trim())
             .then(() => {
-                button.style.backgroundColor = "slategray"; // Fond gris temporaire
-                button.style.borderRadius = "5px"; // Coins arrondis
-                button.style.padding = "5px"; // Espacement pour l'effet visuel
-                button.style.backgroundImage = "url('Images/Check.png')"; // Change l'image
+                button.style.backgroundColor = "slategray";
+                button.style.borderRadius = "5px"; 
+                button.style.padding = "5px"; 
+                button.style.backgroundImage = "url('Images/Check.png')"; 
 
                 setTimeout(() => {
-                    button.style.backgroundColor = ""; // Réinitialisation
+                    button.style.backgroundColor = ""; 
                     button.style.borderRadius = "";
                     button.style.padding = "";
-                    button.style.backgroundImage = "url('Images/Copier.png')"; // Remet l'image d'origine
+                    button.style.backgroundImage = "url('Images/Copier.png')"; 
                 }, 2000);
             })
             .catch(err => {
@@ -205,54 +205,34 @@
                 if (scrollTop > 100 && scrollTop < 210 ) {
                     menu.style.top = "12%";
                 } else if (scrollTop > 230 ) {
-                    menu.style.top = "2%"; // Ajuste la position du menu
+                    menu.style.top = "2%"; 
                 }
-                else { // Si on est en haut de la page
-                    menu.style.top = "20%"; // Remet le menu en haut
+                else { 
+                    menu.style.top = "20%"; 
                 }
-
-
                 lastScrollTop = scrollTop;
             });
         });
         document.addEventListener("contextmenu", function (event) {
             event.preventDefault();
             let element = event.target;
-
-            // Vérifie si l'élément est un élément HTML valide (pas déjà un conteneur de code)
-            if (element && element.tagName ) { //&& !element.closest(".code-container")
-                // Crée un conteneur pour afficher le code HTML
+           
+            if (element && element.tagName ) { 
+                
                 let codeContainer = document.createElement("div");
                 codeContainer.classList.add("code-container");
-
-                // Crée un élément <pre> et <code> pour afficher le code HTML
                 let pre = document.createElement("pre");
                 let code = document.createElement("code");
                 code.classList.add("language-html");
-
-                // Récupère le code complet de l'élément (y compris ses enfants et attributs)
                 code.textContent = element.outerHTML;
-
                 pre.appendChild(code);
                 codeContainer.appendChild(pre);
-
-                // Cache l'élément original en ajoutant une classe "hidden"
-                element.classList.add("hidden");
-
-                // Remplace l'élément original par le code affiché
-                element.parentNode.insertBefore(codeContainer, element);
-
-                // Applique la coloration syntaxique sur le code HTML affiché
-                Prism.highlightAll();
-
-                // Ajouter un événement pour afficher l'élément lors du clic droit sur le code
+                element.classList.add("hidden");                
+                element.parentNode.insertBefore(codeContainer, element);                
+                Prism.highlightAll();               
                 codeContainer.addEventListener("contextmenu", function (e) {
-                    e.preventDefault();
-
-                    // Afficher l'élément original en supprimant la classe "hidden"
-                    element.classList.remove("hidden");
-
-                    // Remplacer le code par l'élément restauré
+                    e.preventDefault();                   
+                    element.classList.remove("hidden");                   
                     codeContainer.remove();
                 });
             }
